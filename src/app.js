@@ -70,7 +70,7 @@ function displayWeather(data){
     if(current){
 
         weatherContainer.innerHTML = `
-        <div class="cloudInfo-Item m-4 bg-lime-600 text-white p-5 rounded-2xl flex flex-col md:flex-row justify-between items-center">
+        <div class="cloudInfo-Item m-4 bg-indigo-500 text-white p-5 rounded-2xl flex flex-col md:flex-row justify-between items-center">
             <div>
                 <h2 class="font-semibold text-xl mb-1">${city} ${new Date(current.dt * 1000).toLocaleDateString()}</h2>
                 <p>Temperature: ${current.main.temp}°C</p>
@@ -89,7 +89,7 @@ function displayWeather(data){
     // 5-Day Forecast
 
     weeklyContainer.innerHTML = dailyForecast.map(day =>  `
-        <div class="weeklyCloud-Item bg-sky-600 shadow-lg rounded-lg p-4 text-center text-white w-full">
+        <div class="weeklyCloud-Item bg-yellow-700 shadow-lg rounded-lg p-4 text-center text-white w-full">
             <p class ="font-semibold">${new Date(day.dt * 1000).toLocaleDateString()}</p>
             <img src="https://openweathermap.org/img/wn/${day.weather[0].icon}@2x.png" alt="Weather Icon" class="w-12 h-12 mx-auto">
             <p class="capitalize">${day.weather[0].description}</p>
