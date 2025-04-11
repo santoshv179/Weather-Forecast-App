@@ -138,7 +138,7 @@ function saveRecentSearch(city){
     updateDropdown();
 }
 
-// Event listent serch Dropdown
+// Event listent search Dropdown
 
 recentSearchesDropdown.addEventListener("change",(e)=>{
     if(e.target.value){
